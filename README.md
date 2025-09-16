@@ -18,7 +18,34 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 - 🛠️ **Tech:** Notebooks → **star schema** → PBIX; fast visuals; RLS sanity page.  
 - ⏱️ **60-sec demo:** open `powerbi/Olist-Dashboard.pbix`, point to `data/*/*.csv`, **Refresh**.
 
+
 ---
+
+
+### Dashboards (screenshots)
+
+<p align="center">
+  <img src="assets/dashboards/Performance_overview.png" width="45%"/>
+  <img src="assets/dashboards/Performance_overview2.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/Customer_segmentation%20(RFM).png" width="45%"/>
+  <img src="assets/dashboards/drillthrough%201%20seller%20insight.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/drillthrough%202%20customers%20performance.png" width="45%"/>
+  <img src="assets/dashboards/drillthrough3%20Productcategory%20details.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/RLS%20check1.png" width="45%"/>
+  <img src="assets/dashboards/RLS%20check2.png" width="45%"/>
+</p>
+
+
+
 
 ## Repository structure
 
@@ -83,27 +110,4 @@ spark.conf.set(
 ** Data Source:** Public Olist e-commerce dataset (Brazil).  
 This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
 Please check the original dataset license for re-use and attribution guidelines.
-
-## Dashboards (screenshots)
-
-<p align="center">
-  <img src="assets/dashboards/Performance_overview.png" width="45%"/>
-  <img src="assets/dashboards/Performance_overview2.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/Customer_segmentation%20(RFM).png" width="45%"/>
-  <img src="assets/dashboards/drillthrough%201%20seller%20insight.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/drillthrough%202%20customers%20performance.png" width="45%"/>
-  <img src="assets/dashboards/drillthrough3%20Productcategory%20details.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/RLS%20check1.png" width="45%"/>
-  <img src="assets/dashboards/RLS%20check2.png" width="45%"/>
-</p>
-
 
