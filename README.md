@@ -22,21 +22,6 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 ---
 
 
-## Findings & Recommendations
-
-**What we learned (high level)**  
-- Revenue growth is driven by a few categories (e.g., *health_beauty*) and a handful of seller states.  
-- Customer base is wide but **low-frequency**; repeat purchase rate is modest (~10–11% in our sample run).  
-- Review score and delivery performance move together: weaker delivery windows → lower review score.  
-- A small set of customers contributes a big share of revenue (power-law).  
-
-**What to do next (actions)**  
-- **Retention lift:** launch targeted CRM for *Best/Loyal* & *At Risk* segments (RFM) with tailored offers.  
-- **Category focus:** double down on top categories/regions; test cross-sell bundles to raise AOV.  
-- **Delivery SLAs:** prioritize lanes with low review scores; set SLA+fee rules and track improvement weekly.  
-- **Top-N playbook:** build playbooks for Top sellers/customers (white-glove ops, faster returns, priority stock).  
-- **Measure health:** add cohort retention and incremental refresh to keep KPIs fresh and comparable.
-
 
 ```
 
@@ -128,24 +113,22 @@ spark.conf.set(
 - Sample data (CSV): [`data/`](data/)
 
 
-## Data & License
-- **Source:** Public *Olist* e-commerce dataset (Brazil).
-- This repo includes curated **star-schema CSVs** for local demo.
-- See [`LICENSE`](LICENSE) and the original Olist license for re-use/attribution.
 
-## Security Notes
-- No secrets in this repo. Use **Databricks Secrets** or environment variables.
-- Prefer **HTTPS-only SAS**; rotate tokens; restrict IPs where possible.
-- If you fork this repo, double-check you didn’t commit any local credentials.
 
-## Roadmap
-- Per-state RFM thresholds
-- CLTV v1 (ARPU × Margin × Retention / (1–Retention))
-- 100% stacked “RFM Mix %”
-- Incremental refresh & cohort/time-dynamic RFM
-- Delta Lake (Bronze/Silver/Gold) via `abfss://`
-- Data quality checks & parameterized pipelines
+## Findings & Recommendations
 
+**What we learned (high level)**  
+- Revenue growth is driven by a few categories (e.g., *health_beauty*) and a handful of seller states.  
+- Customer base is wide but **low-frequency**; repeat purchase rate is modest (~10–11% in our sample run).  
+- Review score and delivery performance move together: weaker delivery windows → lower review score.  
+- A small set of customers contributes a big share of revenue (power-law).  
+
+**What to do next (actions)**  
+- **Retention lift:** launch targeted CRM for *Best/Loyal* & *At Risk* segments (RFM) with tailored offers.  
+- **Category focus:** double down on top categories/regions; test cross-sell bundles to raise AOV.  
+- **Delivery SLAs:** prioritize lanes with low review scores; set SLA+fee rules and track improvement weekly.  
+- **Top-N playbook:** build playbooks for Top sellers/customers (white-glove ops, faster returns, priority stock).  
+- **Measure health:** add cohort retention and incremental refresh to keep KPIs fresh and comparable.
 
 
 ### Dashboards (screenshots)
@@ -180,3 +163,21 @@ spark.conf.set(
 <p align="center">
   <img src="assets/azure/azure-csv_data.png" width="45%"/>
 </p>
+## Data & License
+- **Source:** Public *Olist* e-commerce dataset (Brazil).
+- This repo includes curated **star-schema CSVs** for local demo.
+- See [`LICENSE`](LICENSE) and the original Olist license for re-use/attribution.
+
+## Security Notes
+- No secrets in this repo. Use **Databricks Secrets** or environment variables.
+- Prefer **HTTPS-only SAS**; rotate tokens; restrict IPs where possible.
+- If you fork this repo, double-check you didn’t commit any local credentials.
+
+## Roadmap
+- Per-state RFM thresholds
+- CLTV v1 (ARPU × Margin × Retention / (1–Retention))
+- 100% stacked “RFM Mix %”
+- Incremental refresh & cohort/time-dynamic RFM
+- Delta Lake (Bronze/Silver/Gold) via `abfss://`
+- Data quality checks & parameterized pipelines
+
