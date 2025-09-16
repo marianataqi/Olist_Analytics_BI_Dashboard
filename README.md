@@ -47,27 +47,36 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 
 
 
-## Repository structure
-
-├─ databricks/
-│ ├─ notebooks/
-│ │ ├─ etl_olist.py # exported & sanitized notebook
-│ │ └─ sql/ # (optional) SQL exports
-│ └─ README.md # how to import/run in Databricks
-├─ data/ # optional local star-schema CSVs
-│ ├─ FactOrders/FactOrders.csv
-│ ├─ DimCustomer/DimCustomer.csv
-│ ├─ DimProduct/DimProduct.csv
-│ ├─ DimSeller/DimSeller.csv
-│ └─ DimDate/DimDate.csv
+.
+├─ Databricks/
+│  └─ notebooks/
+│     ├─ 00_bootstrap_conf.py         # Spark SAS auth (use Secret Scope in real runs)
+│     └─ 01_etl_olist.sql             # SQL notebook: unify Olist & create star views
+├─ data/                              # curated star-schema CSVs for local demo
+│  ├─ Dim_Customer.csv
+│  ├─ Dim_Date.csv
+│  ├─ Dim_Product.csv
+│  ├─ Dim_Seller.csv
+│  ├─ Seller_State_Emails.csv         # RLS demo mapping
+│  └─ Fact_order.csv                  
 ├─ powerbi/
-│ └─ Olist-Dashboard.pbix
+│  └─ Olist-Dashboard.pbix
 ├─ assets/
-│ ├─ azure/ # redacted infra screenshots
-│ ├─ databricks/ # notebook screenshots
-│ └─ dashboards/ # page screenshots
-└─ docs/ # deep dives (engineering, model, RFM…)
-
+│  ├─ azure/                          # redacted infra screenshots (SAS, containers, CSVs)
+│  ├─ dashboards/                     # dashboard page screenshots
+│  ├─ databricks/                     # sanitized notebook screenshot
+│  └─ videos/                         # Olist-demo.gif + .mp4 
+├─ docs/                              # deep dives (model, RFM, measures, security, roadmap)
+│  ├─ engineering.md
+│  ├─ powerbi_model.md
+│  ├─ rfm.md
+│  ├─ measures.md
+│  ├─ security.md
+│  ├─ roadmap.md
+│  └─ assumptions.md
+├─ config.template.json               # example config 
+├─ .gitignore
+└─ LICENSE
 
 ---
 
