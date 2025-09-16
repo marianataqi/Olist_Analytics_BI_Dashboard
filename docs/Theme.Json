@@ -1,0 +1,33 @@
+{
+  "name": "Custom Corporate Theme",
+  "dataColors": [
+    "#1E3A8A",
+    "#374151",
+    "#10B981",
+    "#93C5FD",
+    "#6B7280",
+    "#047857"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1E3A8A",
+  "tableAccent": "#10B981",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "color": { "solid": { "color": "#1E3A8A" } },
+            "fontSize": 13,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "labels": [
+          {
+            "color": { "solid": { "color": "#374151" } },
+            "fontSize": 11
+          }
+        ]
+      }
+    }
+  }
+}

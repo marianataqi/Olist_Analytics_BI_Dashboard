@@ -1,0 +1,4 @@
+# Copy to .env (do NOT commit .env)
+SAS_TOKEN=<YOUR_SAS_TOKEN_AT_RUNTIME>
+STORAGE_ACCOUNT=olistdatalake2025
+CONTAINER=olist-raw
