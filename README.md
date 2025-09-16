@@ -22,9 +22,24 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 ---
 
 
+## Findings & Recommendations
+
+**What we learned (high level)**  
+- Revenue growth is driven by a few categories (e.g., *health_beauty*) and a handful of seller states.  
+- Customer base is wide but **low-frequency**; repeat purchase rate is modest (~10–11% in our sample run).  
+- Review score and delivery performance move together: weaker delivery windows → lower review score.  
+- A small set of customers contributes a big share of revenue (power-law).  
+
+**What to do next (actions)**  
+- **Retention lift:** launch targeted CRM for *Best/Loyal* & *At Risk* segments (RFM) with tailored offers.  
+- **Category focus:** double down on top categories/regions; test cross-sell bundles to raise AOV.  
+- **Delivery SLAs:** prioritize lanes with low review scores; set SLA+fee rules and track improvement weekly.  
+- **Top-N playbook:** build playbooks for Top sellers/customers (white-glove ops, faster returns, priority stock).  
+- **Measure health:** add cohort retention and incremental refresh to keep KPIs fresh and comparable.
 
 
 ```
+
 .
 ├─ Databricks/
 │  └─ notebooks/
