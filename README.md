@@ -93,6 +93,19 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 3. Store your SAS in a **Secret Scope** and run the notebook to export the star schema back to Blob.  
 4. Open the PBIX and connect to those CSVs (Blob or local copy).
 
+## Azure proofs (redacted)
+
+<p align="center">
+  <img src="assets/azure/azure-sas-settings.png" width="45%"/>
+  <img src="assets/azure/azure-containers-list.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/azure/azure-csv_data.png" width="45%"/>
+</p>
+
+
+
 Example (sanitized):
 
 ```python
