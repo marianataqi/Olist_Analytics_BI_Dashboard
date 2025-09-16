@@ -79,11 +79,31 @@ spark.conf.set(
     f"fs.azure.sas.{container}.{account}.blob.core.windows.net",
     sas_token
 )
-**Data Source:** Public Olist e-commerce dataset (Brazil).  
+
+** Data Source:** Public Olist e-commerce dataset (Brazil).  
 This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
 Please check the original dataset license for re-use and attribution guidelines.
 
-## 🎬 Demo
+## Dashboards (screenshots)
 
-[![Olist demo](assets/videos/olist-demo.gif)](assets/videos/olist-demo.mp4)
+<p align="center">
+  <img src="assets/dashboards/Performance_overview.png" width="45%"/>
+  <img src="assets/dashboards/Performance_overview2.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/Customer_segmentation%20(RFM).png" width="45%"/>
+  <img src="assets/dashboards/drillthrough%201%20seller%20insight.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/drillthrough%202%20customers%20performance.png" width="45%"/>
+  <img src="assets/dashboards/drillthrough3%20Productcategory%20details.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/RLS%20check1.png" width="45%"/>
+  <img src="assets/dashboards/RLS%20check2.png" width="45%"/>
+</p>
+
 
