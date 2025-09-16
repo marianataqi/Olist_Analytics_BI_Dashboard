@@ -106,6 +106,11 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 
 
 
+** Data Source:** Public Olist e-commerce dataset (Brazil).  
+This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
+Please check the original dataset license for re-use and attribution guidelines.
+
+
 Example (sanitized):
 
 ```python
@@ -120,7 +125,4 @@ spark.conf.set(
     sas_token
 )
 
-** Data Source:** Public Olist e-commerce dataset (Brazil).  
-This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
-Please check the original dataset license for re-use and attribution guidelines.
 
