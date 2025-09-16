@@ -22,31 +22,9 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 ---
 
 
-### Dashboards (screenshots)
-
-<p align="center">
-  <img src="assets/dashboards/Performance_overview.png" width="45%"/>
-  <img src="assets/dashboards/Performance_overview2.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/Customer_segmentation%20(RFM).png" width="45%"/>
-  <img src="assets/dashboards/drillthrough%201%20seller%20insight.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/drillthrough%202%20customers%20performance.png" width="45%"/>
-  <img src="assets/dashboards/drillthrough3%20Productcategory%20details.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/dashboards/RLS%20check1.png" width="45%"/>
-  <img src="assets/dashboards/RLS%20check2.png" width="45%"/>
-</p>
 
 
-
-
+```
 .
 ├─ Databricks/
 │  └─ notebooks/
@@ -79,6 +57,7 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 └─ LICENSE
 
 ---
+```
 
 ## Architecture
 
@@ -102,25 +81,6 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 3. Store your SAS in a **Secret Scope** and run the notebook to export the star schema back to Blob.  
 4. Open the PBIX and connect to those CSVs (Blob or local copy).
 
-## Azure proofs (redacted)
-
-<p align="center">
-  <img src="assets/azure/azure-sas-settings.png" width="45%"/>
-  <img src="assets/azure/azure-containers-list.png" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="assets/azure/azure-csv_data.png" width="45%"/>
-</p>
-
-
-
-** Data Source:** Public Olist e-commerce dataset (Brazil).  
-This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
-Please check the original dataset license for re-use and attribution guidelines.
-
-- Download PBIX: [`powerbi/Olist-Dashboard.pbix`](powerbi/Olist-Dashboard.pbix)
-- Sample data (CSV): [`data/`](data/)
 
 
 Example (sanitized):
@@ -138,3 +98,69 @@ spark.conf.set(
 )
 
 
+## Data Source
+- Public **Olist** e-commerce dataset (Brazil).
+- This repo includes curated **star-schema CSVs** for local demo:
+  - `FactOrders`
+  - `DimCustomer`
+  - `DimProduct`
+  - `DimSeller`
+  - `DimDate`
+- Please check the original dataset license for re-use and attribution guidelines. See [`LICENSE`](LICENSE).
+
+- Download PBIX: [`powerbi/Olist-Dashboard.pbix`](powerbi/Olist-Dashboard.pbix)
+- Sample data (CSV): [`data/`](data/)
+
+
+## Data & License
+- **Source:** Public *Olist* e-commerce dataset (Brazil).
+- This repo includes curated **star-schema CSVs** for local demo.
+- See [`LICENSE`](LICENSE) and the original Olist license for re-use/attribution.
+
+## Security Notes
+- No secrets in this repo. Use **Databricks Secrets** or environment variables.
+- Prefer **HTTPS-only SAS**; rotate tokens; restrict IPs where possible.
+- If you fork this repo, double-check you didn’t commit any local credentials.
+
+## Roadmap
+- Per-state RFM thresholds
+- CLTV v1 (ARPU × Margin × Retention / (1–Retention))
+- 100% stacked “RFM Mix %”
+- Incremental refresh & cohort/time-dynamic RFM
+- Delta Lake (Bronze/Silver/Gold) via `abfss://`
+- Data quality checks & parameterized pipelines
+
+
+
+### Dashboards (screenshots)
+
+<p align="center">
+  <img src="assets/dashboards/Performance_overview.png" width="45%"/>
+  <img src="assets/dashboards/Performance_overview2.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/Customer_segmentation%20(RFM).png" width="45%"/>
+  <img src="assets/dashboards/drillthrough%201%20seller%20insight.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/drillthrough%202%20customers%20performance.png" width="45%"/>
+  <img src="assets/dashboards/drillthrough3%20Productcategory%20details.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/dashboards/RLS%20check1.png" width="45%"/>
+  <img src="assets/dashboards/RLS%20check2.png" width="45%"/>
+</p>
+
+## Azure proofs (redacted)
+
+<p align="center">
+  <img src="assets/azure/azure-sas-settings.png" width="45%"/>
+  <img src="assets/azure/azure-containers-list.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/azure/azure-csv_data.png" width="45%"/>
+</p>
