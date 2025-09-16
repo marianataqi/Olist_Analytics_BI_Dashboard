@@ -1,3 +1,8 @@
+
+## Demo
+
+![Olist demo](assets/videos/Olist-demo.gif)
+
 # Olist Ecommerce Analytics — Azure Databricks + Power BI
 
 **End-to-end retail analytics on the public Olist dataset.**  
