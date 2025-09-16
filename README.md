@@ -74,7 +74,7 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 ## Architecture
 
 **Raw (Blob/SAS) → Curated (Star schema in Databricks) → BI (Power BI)**  
-(See `assets/azure/architecture.png`, redacted.)
+
 
 ---
 
