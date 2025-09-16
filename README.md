@@ -110,6 +110,9 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 This repo includes the curated **star-schema CSVs** (FactOrders, DimCustomer, DimProduct, DimSeller, DimDate) for local demo.  
 Please check the original dataset license for re-use and attribution guidelines.
 
+- Download PBIX: [`powerbi/Olist-Dashboard.pbix`](powerbi/Olist-Dashboard.pbix)
+- Sample data (CSV): [`data/`](data/)
+
 
 Example (sanitized):
 
