@@ -14,9 +14,9 @@ Ingest & model in **Azure Databricks**, store curated data in **Azure Blob (SAS)
 
 ## TL;DR
 
-- ⭐ **Business:** growth levers via **RFM cohorts**, top sellers/customers/categories, YoY trends.  
-- 🛠️ **Tech:** Notebooks → **star schema** → PBIX; fast visuals; RLS sanity page.  
-- ⏱️ **60-sec demo:** open `powerbi/Olist-Dashboard.pbix`, point to `data/*/*.csv`, **Refresh**.
+-  **Business:** growth levers via **RFM cohorts**, top sellers/customers/categories, YoY trends.  
+-  **Tech:** Notebooks → **star schema** → PBIX; fast visuals; RLS sanity page.  
+-  **60-sec demo:** open `powerbi/Olist-Dashboard.pbix`, point to `data/*/*.csv`, **Refresh**.
 
 
 ---
