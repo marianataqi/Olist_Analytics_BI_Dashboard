@@ -163,6 +163,7 @@ spark.conf.set(
 <p align="center">
   <img src="assets/azure/azure-csv_data.png" width="45%"/>
 </p>
+
 ## Data & License
 - **Source:** Public *Olist* e-commerce dataset (Brazil).
 - This repo includes curated **star-schema CSVs** for local demo.
